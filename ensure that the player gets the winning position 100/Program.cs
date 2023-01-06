@@ -9,6 +9,7 @@
             const int StartPosition = 0;
             const int WinningPosition = 100;
             int PlayerPosition = 0;
+            int diceRollCount = 0;
             int diceRoll;
 
 
@@ -21,7 +22,7 @@
             {
                 diceRoll = random.Next(1, 7);
                 Console.WriteLine($"\nPlayer rolled number {diceRoll} on position {PlayerPosition}");
-
+                diceRollCount++;
                 int option = random.Next(1, 3);
                 switch (option)
                 {
@@ -49,8 +50,10 @@
             }
             if (PlayerPosition == 100)
             {
-                Console.WriteLine("==========Player Wins==========");
+                Console.WriteLine("\n==========Player Wins==========");
             }
+            Console.WriteLine($"\nDice was played {diceRollCount} times to win the game");
+            Console.ReadLine();
         }
     }
 }
