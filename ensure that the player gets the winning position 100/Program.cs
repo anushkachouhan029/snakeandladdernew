@@ -55,5 +55,3 @@
             Console.WriteLine($"\nDice was played {diceRollCount} times to win the game");
             Console.ReadLine();
         }
-    }
-}
